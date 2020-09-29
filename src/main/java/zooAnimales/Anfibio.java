@@ -12,6 +12,8 @@ public class Anfibio extends Animal {
 	private String colorPiel;
 	private boolean venenoso;
 	private static int totalAnfibios;
+	
+	
 	public Anfibio() {
 		super();
 		totalAnfibios++;
@@ -28,6 +30,7 @@ public class Anfibio extends Animal {
 		totalAnimales++;
 		listado.add(this);
 	}
+	
 	
 	public Anfibio crearRana(int totalAnimales, String nombre, int edad, String genero, Zona zona,
 			List<Anfibio> listado, int ranas, int salamandras) {

@@ -32,13 +32,13 @@ public class Ave extends Animal {
 	public Ave crearHalcon(int totalAnimales, String nombre, int edad, String genero, Zona zona,
 			List<Ave> listado, int halcones, int aguilas) {
 		halcones++;
-		return new Ave(totalAnimales,nombre,edad,"montañas",genero,zona, listado,halcones,aguilas,"cafe glorioso");
+		return new Ave(totalAnimales,nombre,edad,"montanas",genero,zona, listado,halcones,aguilas,"cafe glorioso");
 	}
 	
 	public Ave crearAguila(int totalAnimales, String nombre, int edad, String habitat, String genero, Zona zona,
 			List<Ave> listado, int halcones, int aguilas, String colorPlumas) {
 		aguilas++;
-		return new Ave(totalAnimales,nombre,edad,"montañas",genero,zona, listado,halcones,aguilas,"blanco y amarillo");
+		return new Ave(totalAnimales,nombre,edad,"montanas",genero,zona, listado,halcones,aguilas,"blanco y amarillo");
 	}
 	
 	@Override
