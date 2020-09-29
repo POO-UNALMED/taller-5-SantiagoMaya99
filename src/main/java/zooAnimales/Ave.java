@@ -18,27 +18,21 @@ public class Ave extends Animal {
 		totalAves++;
 		listado.add(this);
 	}
-	public Ave(int totalAnimales, String nombre, int edad, String habitat, String genero, Zona zona,
-			List<Ave> listado, int halcones, int aguilas, String colorPlumas) {
-		super(totalAnimales, nombre, edad, habitat, genero, zona);
-		this.listado = listado;
-		this.halcones = halcones;
-		this.aguilas = aguilas;
+	public Ave(String nombre, int edad, String habitat, String genero,String colorPlumas) {
+		super(nombre, edad, habitat, genero);
 		this.colorPlumas = colorPlumas;
 		totalAves++;
 		listado.add(this);
 	}
 	
-	public Ave crearHalcon(int totalAnimales, String nombre, int edad, String genero, Zona zona,
-			List<Ave> listado, int halcones, int aguilas) {
+	public Ave crearHalcon( String nombre, int edad, String genero) {
 		halcones++;
-		return new Ave(totalAnimales,nombre,edad,"montanas",genero,zona, listado,halcones,aguilas,"cafe glorioso");
+		return new Ave(nombre,edad,"montanas",genero,"cafe glorioso");
 	}
 	
-	public Ave crearAguila(int totalAnimales, String nombre, int edad, String habitat, String genero, Zona zona,
-			List<Ave> listado, int halcones, int aguilas, String colorPlumas) {
+	public Ave crearAguila(String nombre, int edad, String habitat, String genero) {
 		aguilas++;
-		return new Ave(totalAnimales,nombre,edad,"montanas",genero,zona, listado,halcones,aguilas,"blanco y amarillo");
+		return new Ave(nombre,edad,"montanas",genero,"blanco y amarillo");
 	}
 	
 	@Override

@@ -15,14 +15,14 @@ public class Animal {
 		totalAnimales++;
 	}
 
-	public Animal(int totalAnimales, String nombre, int edad, String habitat, String genero, Zona zona) {
+	public Animal(String nombre, int edad, String habitat, String genero) {
 		super();
-		this.totalAnimales++;
+		totalAnimales++;
 		this.nombre = nombre;
 		this.edad = edad;
 		this.habitat = habitat;
 		this.genero = genero;
-		this.zona = zona;
+		
 	}
 
 	public String totalPorTipo() {

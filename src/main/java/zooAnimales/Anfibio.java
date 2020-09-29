@@ -19,29 +19,24 @@ public class Anfibio extends Animal {
 		totalAnfibios++;
 		listado.add(this);
 	}
-	public Anfibio(int totalAnimales, String nombre, int edad, String habitat, String genero, Zona zona,
-			List<Anfibio> listado, int ranas, int salamandras, String colorPiel, boolean venenoso) {
-		super(totalAnimales, nombre, edad, habitat, genero, zona);
-		this.listado = listado;
-		this.ranas = ranas;
-		this.salamandras = salamandras;
+	public Anfibio(String nombre, int edad, String habitat, String genero,String colorPiel, boolean venenoso) {
+		super(nombre, edad, habitat, genero);
+		
 		this.colorPiel = colorPiel;
 		this.venenoso = venenoso;
-		totalAnimales++;
+		totalAnfibios++;
 		listado.add(this);
 	}
 	
 	
-	public Anfibio crearRana(int totalAnimales, String nombre, int edad, String genero, Zona zona,
-			List<Anfibio> listado, int ranas, int salamandras) {
+	public Anfibio crearRana(String nombre, int edad, String genero) {
 		ranas++;
-		return new Anfibio(totalAnimales,nombre,edad,"selva",genero,zona,listado,ranas,salamandras,"rojo",true);
+		return new Anfibio(nombre,edad,"selva",genero,"rojo",true);
 	}
 	
-	public Anfibio crearSalamandra(int totalAnimales, String nombre, int edad, String genero, Zona zona,
-			List<Anfibio> listado, int ranas, int salamandras) {
+	public Anfibio crearSalamandra(String nombre, int edad, String genero) {
 		salamandras++;
-		return new Anfibio(totalAnimales,nombre,edad,"selva",genero,zona,listado,ranas,salamandras,"negro y amarillo",false);
+		return new Anfibio(nombre,edad,"selva",genero,"negro y amarillo",false);
 	}
 	
 	

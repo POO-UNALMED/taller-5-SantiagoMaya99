@@ -14,11 +14,10 @@ public class Zona {
 		super();
 	}
 
-	public Zona(String nombre, Zoologico zoo, List<Animal> animales) {
+	public Zona(String nombre, Zoologico zoo) {
 		super();
 		this.nombre = nombre;
 		this.zoo = zoo;
-		this.animales = animales;
 	}
 
 	

@@ -17,28 +17,22 @@ public class Pez extends Animal {
 		totalPeces++;
 		listado.add(this);
 	}
-	public Pez(int totalAnimales, String nombre, int edad, String habitat, String genero, Zona zona,
-			List<Pez> listado, int salmones, int bacalaos, String colorEscamas, int cantidadAletas) {
-		super(totalAnimales, nombre, edad, habitat, genero, zona);
-		this.listado = listado;
-		this.salmones = salmones;
-		this.bacalaos = bacalaos;
+	public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {
+		super(nombre, edad, habitat, genero);
 		this.colorEscamas = colorEscamas;
 		this.cantidadAletas = cantidadAletas;
-		totalAnimales++;
+		totalPeces++;
 		listado.add(this);
 	}
 	
-	public Pez crearSalmon(int totalAnimales, String nombre, int edad, String genero, Zona zona,
-			List<Pez> listado, int salmones, int bacalaos) {
+	public Pez crearSalmon(String nombre, int edad, String genero) {
 		salmones++;
-		return new Pez(totalAnimales,nombre,edad,"oceano",genero,zona,listado,salmones,bacalaos,"rojo",6);
+		return new Pez(nombre,edad,"oceano",genero,"rojo",6);
 	}
 	
-	public Pez crearBacalao(int totalAnimales, String nombre, int edad, String genero, Zona zona,
-			List<Pez> listado, int salmones, int bacalaos) {
+	public Pez crearBacalao(String nombre, int edad, String genero) {
 		bacalaos++;
-		return new Pez(totalAnimales,nombre,edad,"oceano",genero,zona,listado,salmones,bacalaos,"gris",6);
+		return new Pez(nombre,edad,"oceano",genero,"gris",6);
 	}
 	
 	
