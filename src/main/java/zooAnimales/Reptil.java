@@ -6,7 +6,7 @@ import java.util.List;
 import gestion.Zona;
 
 public class Reptil extends Animal {
-	private List<Reptil> listado= new ArrayList<Reptil>();
+	private static List<Reptil> listado= new ArrayList<Reptil>();
 	public static int iguanas;
 	public static int serpientes;
 	private String colorEscamas;
@@ -27,12 +27,12 @@ public class Reptil extends Animal {
 	
 	
 	
-	public Reptil crearIguana(String nombre, int edad, String genero) {
+	public static  Reptil crearIguana(String nombre, int edad, String genero) {
 		iguanas++;
 		return new Reptil(nombre,edad,"humedal",genero,"verde",3);
 	}
 	
-	public Reptil crearSerpiente(String nombre, int edad,  String genero) {
+	public static Reptil crearSerpiente(String nombre, int edad,  String genero) {
 		serpientes++;
 		return new Reptil(nombre,edad,"jungla",genero,"blanco",1);
 	}
@@ -43,11 +43,11 @@ public class Reptil extends Animal {
 		return "reptar";
 	}
 	
-	public List<Reptil> getListado() {
+	public static List<Reptil> getListado() {
 		return listado;
 	}
-	public void setListado(List<Reptil> listado) {
-		this.listado = listado;
+	public static void setListado(List<Reptil> listado) {
+		Reptil.listado = listado;
 	}
 	public String getColorEscamas() {
 		return colorEscamas;

@@ -6,7 +6,7 @@ import java.util.List;
 import gestion.Zona;
 
 public class Ave extends Animal {
-	private List<Ave> listado= new ArrayList<Ave>();
+	private static List<Ave> listado= new ArrayList<Ave>();
 	public static int halcones;
 	public static int aguilas;
 	private String colorPlumas;
@@ -25,12 +25,12 @@ public class Ave extends Animal {
 		listado.add(this);
 	}
 	
-	public Ave crearHalcon( String nombre, int edad, String genero) {
+	public static Ave crearHalcon( String nombre, int edad, String genero) {
 		halcones++;
 		return new Ave(nombre,edad,"montanas",genero,"cafe glorioso");
 	}
 	
-	public Ave crearAguila(String nombre, int edad, String habitat, String genero) {
+	public static Ave crearAguila(String nombre, int edad, String habitat, String genero) {
 		aguilas++;
 		return new Ave(nombre,edad,"montanas",genero,"blanco y amarillo");
 	}
@@ -40,11 +40,11 @@ public class Ave extends Animal {
 		return "volar";
 	}
 	
-	public List<Ave> getListado() {
+	public static List<Ave> getListado() {
 		return listado;
 	}
-	public void setListado(List<Ave> listado) {
-		this.listado = listado;
+	public static void setListado(List<Ave> listado) {
+		Ave.listado = listado;
 	}
 	public String getColorPlumas() {
 		return colorPlumas;
